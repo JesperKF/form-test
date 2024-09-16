@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Tilmelding</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <div class="input-group">
+          <label for="login-username">Brugernavn</label>
+          <input type="text" id="login-username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="login-password">Kodeord</label>
+          <input type="password" id="login-password" name="password" required />
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <a href="#" class="forgot-password">Glemt kodeord?</a>
+
+      <div class="divider"></div>
+      <h2>Tilmelding</h2>
+      <form action="/signup" method="POST">
+        <div class="input-group">
+          <label for="signup-username">Brugernavn</label>
+          <input type="text" id="signup-username" name="signup-username" required />
+        </div>
+        <div class="input-group">
+          <label for="signup-password">Kodeord</label>
+          <input type="password" id="signup-password" name="signup-password" required />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="radio-group">
+          <label>Køn:</label>
+          <label> <input type="radio" name="gender" value="male" required /> Mand </label>
+          <label> <input type="radio" name="gender" value="female" required /> Kvinde </label>
+          <label> <input type="radio" name="gender" value="other" required /> Andet </label>
+        </div>
+        <div class="checkbox-group">
+          <label>Interesser:</label>
+          <label> <input type="checkbox" name="interests" value="sports" /> Sport </label>
+          <label> <input type="checkbox" name="interests" value="music" /> Musik </label>
+          <label> <input type="checkbox" name="interests" value="technology" /> Teknologi </label>
+          <label> <input type="checkbox" name="interests" value="travel" /> Rejser </label>
+        </div>
+
+        <button type="submit" class="btn">Tilmeld</button>
+      </form>
+    </div>
+  </body>
+</html>
